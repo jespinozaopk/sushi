@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Fukusuke - Sushi</title>
+    <link rel="stylesheet" href="sushi.css"> <!-- Enlace para el archivo de estilos CSS -->
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Restaurante Fukusuke - Sushi</h1>
+        <nav>
+            <a href="#menu">Menú</a>
+            <a href="#about">Sobre Nosotros</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </header>
+ 
+
+<!-- Sección de Menú -->
+<section id="menu" class="menu-section">
+    <h2>Nuestro Menú</h2>
+    <div class="menu-items">
+        <div class="menu-item">
+            <img src="sushi-salmon.jpg" alt="Roll de Salmón">
+            <div class="menu-info">
+                <h3>Roll de Salmón</h3>
+                <p>Delicioso roll de salmón con aguacate y queso crema.</p>
+                <span>$6.000</span>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="sushi-atun.jpg" alt="Roll de Atún">
+            <div class="menu-info">
+                <h3>Roll de Atún</h3>
+                <p>Roll de atún fresco con pepino y mayonesa especial.</p>
+                <span>$8.000</span>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="tempura-roll.jpg" alt="Tempura Roll">
+            <div class="menu-info">
+                <h3>Tempura Roll</h3>
+                <p>Roll tempura crujiente con camarones y aguacate.</p>
+                <span>$9.000</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="about" class="about-section">
+        <h2>Sobre Nosotros</h2>
+        <p>En Fukusuke, nos especializamos en preparar sushi de alta calidad, combinando ingredientes frescos y técnicas tradicionales japonesas. Ubicados en Maipú, ofrecemos una experiencia gastronómica única con servicio personalizado. ¡Visítanos o haz tu pedido para llevar!</p>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contact" class="contact-section">
+        <h2>Contáctanos</h2>
+        <form action="#" method="POST">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>

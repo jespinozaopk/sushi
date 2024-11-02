@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7; /* Fondo claro */
+    color: #333; /* Color de texto oscuro */
+}
+
+/* Encabezado */
+header {
+    background-color: #ed2424; /* Rojo intenso */
+    color: #fff; /* Texto blanco */
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'MingLiU', sans-serif; /* Cambiar la fuente */
+    font-size: 2.5rem; /* Aumentar el tamaño de fuente */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #000; /* Cambiar a negro en hover */
+}
+
+/* Secciones */
+.menu-section, .about-section, .contact-section {
+    padding: 2rem;
+    max-width: 1200px; /* Ampliar ancho máximo para el menú */
+    margin: auto;
+    background-color: #f7f7f7; /* Fondo claro */
+}
+
+.menu-section h2, .about-section h2, .contact-section h2 {
+    text-align: center;
+    color: #ed2424; /* Rojo */
+}
+
+/* Estilos de cuadrícula para ítems del menú */
+.menu-items {
+    display: grid; /* Usar CSS Grid */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Columnas automáticas */
+    gap: 20px; /* Espaciado entre los ítems */
+}
+
+/* Menú */
+.menu-item {
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* Fondo blanco para el ítem del menú */
+    transition: transform 0.2s;
+}
+
+.menu-item:hover {
+    transform: scale(1.05); /* Efecto de hover */
+    background-color: #f2fa15; /* Cambio de color al pasar el ratón */
+}
+
+.menu-item img {
+    width: 80px; /* Ajusta según necesidad */
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados para imágenes */
+    margin-right: 15px;
+}
+
+.menu-info {
+    flex-grow: 1;
+    text-align: center; /* Centrar el texto de la info */
+}
+
+.menu-info h3 {
+    margin: 0;
+    color: #ed2424; /* Rojo para los títulos de los ítems del menú */
+}
+
+.menu-info p {
+    margin: 0;
+    color: #888; /* Color de la descripción */
+}
+
+/* Formulario */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ddd; /* Borde suave */
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #000; /* Negro para el botón */
+    color: #fff; /* Texto blanco */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #333; /* Color más claro al pasar el ratón */
+}
+
+/* Estilos Responsive */
+@media (max-width: 768px) {
+    nav a {
+        display: block; /* Muestra enlaces en bloque en móvil */
+        margin: 5px 0;
+    }
+
+    header h1 {
+        font-size: 2rem; /* Ajustar tamaño en móvil */
+    }
+}
