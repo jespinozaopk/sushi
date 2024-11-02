@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="sushi.css"> <!-- Enlace para el archivo de estilos CSS -->
 </head>
 <body>
-    <!-- Encabezado -->
-    <header>
-        <h1>Restaurante Fukusuke - Sushi</h1>
-        <nav>
-            <a href="#menu">Menú</a>
-            <a href="#about">Sobre Nosotros</a>
-            <a href="#contact">Contacto</a>
-        </nav>
-    </header>
- 
+<header>
+    <img src="logo.jpeg" alt="Logo del Restaurante" class="logo">
+    <h1>Restaurante Fukusuke - Sushi</h1>
+    <nav>
+        <a href="#menu">Menú</a>
+        <a href="#about">Sobre Nosotros</a>
+        <a href="#contact">Contacto</a>
+        <a href="#carrito">carrito</a>
+    </nav>
+</header>
 
 <!-- Sección de Menú -->
 <section id="menu" class="menu-section">
@@ -47,27 +47,52 @@
             </div>
         </div>
     </div>
+
+<!-- Sección Sobre Nosotros -->
+<section id="about" class="about-section">
+    <h2>Sobre Nosotros</h2>
+    <p>En Fukusuke, nos especializamos en preparar sushi de alta calidad, combinando ingredientes frescos y técnicas tradicionales japonesas. Ubicados en Maipú, ofrecemos una experiencia gastronómica única con servicio personalizado. ¡Visítanos o haz tu pedido para llevar!</p>
 </section>
 
+<!-- Sección de Contacto -->
+<section id="contact" class="contact-section">
+    <h2>Contáctanos</h2>
+    <form class="form">
+        <div class="flex">
+            <label>
+                <input required="" placeholder="" type="text" class="input">
+                <span>Nombre</span>
+            </label>
 
-    <!-- Sección Sobre Nosotros -->
-    <section id="about" class="about-section">
-        <h2>Sobre Nosotros</h2>
-        <p>En Fukusuke, nos especializamos en preparar sushi de alta calidad, combinando ingredientes frescos y técnicas tradicionales japonesas. Ubicados en Maipú, ofrecemos una experiencia gastronómica única con servicio personalizado. ¡Visítanos o haz tu pedido para llevar!</p>
-    </section>
+            <label>
+                <input required="" placeholder="" type="text" class="input">
+                <span>Apellido</span>
+            </label>
+        </div>
 
-    <!-- Sección de Contacto -->
-    <section id="contact" class="contact-section">
-        <h2>Contáctanos</h2>
-        <form action="#" method="POST">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+        <label>
+            <input required="" placeholder="" type="email" class="input">
+            <span>Email</span>
+        </label>
+
+        <label>
+            <input required="" type="tel" placeholder="" class="input">
+            <span>Número de contacto</span>
+        </label>
+
+        <label>
+            <textarea required="" rows="3" placeholder="" class="input01"></textarea>
+            <span>Mensaje</span>
+        </label>
+
+        <button class="fancy" href="#">
+            <span class="top-key"></span>
+            <span class="text">Enviar</span>
+            <span class="bottom-key-1"></span>
+            <span class="bottom-key-2"></span>
+        </button>
+    </form>
+</section>
+<!--Seccion de carrito-->
 </body>
 </html>
