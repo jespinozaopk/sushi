@@ -5,34 +5,75 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7; /* Fondo claro */
-    color: #333; /* Color de texto oscuro */
+    font-family: 'Roboto', sans-serif;
+    background-color: #0f0e0e; /* Fondo claro para el contenido principal */
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 /* Encabezado */
 header {
-    background-color: #ed2424; /* Rojo intenso */
-    color: #fff; /* Texto blanco */
-    padding: 1.5rem;
+    background-color: #e60012; /* Fondo rojo del encabezado */
+    color: white;
+    padding: 10px;
     text-align: center;
 }
 
 header h1 {
-    font-family: 'MingLiU', sans-serif; /* Cambiar la fuente */
-    font-size: 2.5rem; /* Aumentar el tamaño de fuente */
+    margin: 0;
+    font-size: 2em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    margin: 0 15px;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #000; /* Cambiar a negro en hover */
+    color: #ffcc00; /* Efecto hover en los enlaces del menú */
 }
+
+/* Estilos del menú lateral */
+.sidebar {
+    background-color: #1a1a1a; /* Fondo oscuro para el menú lateral */
+    color: white;
+    padding: 20px;
+    width: 250px;
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    color: #ffcc00; /* Color destacado */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color: #ffcc00;
+}
+
 
 /* Secciones */
 .menu-section, .about-section, .contact-section {
@@ -56,41 +97,109 @@ nav a:hover {
 
 /* Menú */
 .menu-item {
-    border: 1px solid #ddd; /* Borde suave */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    background-color: #fff; /* Fondo blanco para el ítem del menú */
-    transition: transform 0.2s;
-}
-
-.menu-item:hover {
-    transform: scale(1.05); /* Efecto de hover */
-    background-color: #f2fa15; /* Cambio de color al pasar el ratón */
+    background-color: #333; /* Fondo oscuro de la tarjeta */
+    border-radius: 10px;
+    color: white;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    position: relative;
 }
 
 .menu-item img {
-    width: 80px; /* Ajusta según necesidad */
-    height: auto;
-    border-radius: 8px; /* Bordes redondeados para imágenes */
-    margin-right: 15px;
+    width: 100%;
+    border-bottom: 2px solid #ffcc00; /* Línea decorativa debajo de la imagen */
 }
 
 .menu-info {
-    flex-grow: 1;
-    text-align: center; /* Centrar el texto de la info */
+    padding: 10px;
 }
 
 .menu-info h3 {
-    margin: 0;
-    color: #ed2424; /* Rojo para los títulos de los ítems del menú */
+    font-size: 1.2em;
+    margin: 10px 0 5px;
 }
 
 .menu-info p {
+    font-size: 0.9em;
+    color: #ddd;
     margin: 0;
-    color: #888; /* Color de la descripción */
 }
+
+
+.price {
+    display: block;
+    font-size: 1.1rem;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #bbb;
+}
+
+.discounted-price {
+    color: #ff4747;
+    font-weight: bold;
+}
+
+/* Botón de carrito */
+.add-to-cart-btn {
+    background-color: #e60012; /* Rojo para el botón de agregar */
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ff4d4d; /* Efecto hover */
+}
+
+.add-to-cart-btn i {
+    font-size: 1.2em;
+}
+
+.new-label {
+    background-color: #d90000;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.cart-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-btn img {
+    width: 40px;
+    height: 40px;
+    filter: invert(100%); /* Cambia el color del ícono a blanco */
+}
+/* Títulos */
+h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 span {
+    color: #e60012;
+}
+
 
 /* Formulario */
 form input, form textarea {
@@ -115,15 +224,17 @@ form button:hover {
     background-color: #333; /* Color más claro al pasar el ratón */
 }
 
-/* Estilos Responsive */
+/* Adaptación para móviles */
 @media (max-width: 768px) {
-    nav a {
-        display: block; /* Muestra enlaces en bloque en móvil */
-        margin: 5px 0;
+    .sidebar {
+        display: none; /* Esconde el menú lateral en móviles */
     }
-
-    header h1 {
-        font-size: 2rem; /* Ajustar tamaño en móvil */
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+    .menu-item {
+        width: 100%;
     }
 }
 /* From Uiverse.io by somshri16 */ 
@@ -136,32 +247,32 @@ form button:hover {
     padding: 20px;
     border-radius: 10px;
     position: relative;
-  }
-  
-  .message {
+    }
+    
+    .message {
     color: rgba(88, 87, 87, 0.822);
     font-size: 14px;
-  }
-  
-  .flex {
+    }
+    
+    .flex {
     display: flex;
     width: 100%;
     gap: 6px;
-  }
-  
-  .form label {
+    }
+    
+    .form label {
     position: relative;
-  }
-  
-  .form label .input {
+    }
+    
+    .form label .input {
     width: 100%;
     padding: 10px 10px 20px 10px;
     outline: 0;
     border: 1px solid rgba(105, 105, 105, 0.397);
     border-radius: 5px;
-  }
-  
-  .form label .input + span {
+    }
+    
+    .form label .input + span {
     position: absolute;
     left: 10px;
     top: 15px;
@@ -169,32 +280,32 @@ form button:hover {
     font-size: 0.9em;
     cursor: text;
     transition: 0.3s ease;
-  }
-  
-  .form label .input:placeholder-shown + span {
+    }
+    
+    .form label .input:placeholder-shown + span {
     top: 15px;
     font-size: 0.9em;
-  }
-  
-  .form label .input:focus + span,.form label .input:valid + span {
+    }
+    
+    .form label .input:focus + span,.form label .input:valid + span {
     top: 30px;
     font-size: 0.7em;
     font-weight: 600;
-  }
-  
-  .form label .input:valid + span {
+    }
+    
+    .form label .input:valid + span {
     color: green;
-  }
-  
-  .input01 {
+    }
+    
+    .input01 {
     width: 100%;
     padding: 10px 10px 20px 10px;
     outline: 0;
     border: 1px solid rgba(105, 105, 105, 0.397);
     border-radius: 5px;
-  }
-  
-  .form label .input01 + span {
+    }
+    
+    .form label .input01 + span {
     position: absolute;
     left: 10px;
     top: 50px;
@@ -202,24 +313,24 @@ form button:hover {
     font-size: 0.9em;
     cursor: text;
     transition: 0.3s ease;
-  }
-  
-  .form label .input01:placeholder-shown + span {
+    }
+    
+    .form label .input01:placeholder-shown + span {
     top: 40px;
     font-size: 0.9em;
-  }
-  
-  .form label .input01:focus + span,.form label .input01:valid + span {
+    }
+    
+    .form label .input01:focus + span,.form label .input01:valid + span {
     top: 50px;
     font-size: 0.7em;
     font-weight: 600;
-  }
-  
-  .form label .input01:valid + span {
+    }
+    
+    .form label .input01:valid + span {
     color: green;
-  }
-  
-  .fancy {
+    }
+    
+    .fancy {
     background-color: transparent;
     border: 2px solid #cacaca;
     border-radius: 0px;
@@ -240,9 +351,9 @@ form button:hover {
     transition: all 0.3s ease-in-out;
     user-select: none;
     font-size: 13px;
-  }
-  
-  .fancy::before {
+    }
+    
+    .fancy::before {
     content: " ";
     width: 1.7rem;
     height: 2px;
@@ -254,9 +365,9 @@ form button:hover {
     transform: translateX(230%);
     transform-origin: center;
     transition: background 0.3s linear, width 0.3s linear;
-  }
-  
-  .fancy .text {
+    }
+    
+    .fancy .text {
     font-size: 1.125em;
     line-height: 1.33333em;
     padding-left: 2em;
@@ -265,65 +376,65 @@ form button:hover {
     transition: all 0.3s ease-in-out;
     text-transform: lowercase;
     text-decoration: none;
-    color: #818181;
-    transform: translateX(30%);
-  }
-  
-  .fancy .top-key {
-    height: 2px;
-    width: 1.5625rem;
-    top: -2px;
-    left: 0.625rem;
-    position: absolute;
-    background: white;
-    transition: width 0.5s ease-out, left 0.3s ease-out;
-  }
-  
-  .fancy .bottom-key-1 {
-    height: 2px;
-    width: 1.5625rem;
-    right: 1.875rem;
-    bottom: -2px;
-    position: absolute;
-    background: white;
-    transition: width 0.5s ease-out, right 0.3s ease-out;
-  }
-  
-  .fancy .bottom-key-2 {
-    height: 2px;
-    width: 0.625rem;
-    right: 0.625rem;
-    bottom: -2px;
-    position: absolute;
-    background: white;
-    transition: width 0.5s ease-out, right 0.3s ease-out;
-  }
-  
-  .fancy:hover {
-    color: white;
+        color: #818181;
+        transform: translateX(30%);
+    }
+    
+    .fancy .top-key {
+        height: 2px;
+        width: 1.5625rem;
+        top: -2px;
+        left: 0.625rem;
+        position: absolute;
+        background: white;
+        transition: width 0.5s ease-out, left 0.3s ease-out;
+    }
+    
+    .fancy .bottom-key-1 {
+        height: 2px;
+        width: 1.5625rem;
+        right: 1.875rem;
+        bottom: -2px;
+        position: absolute;
+        background: white;
+        transition: width 0.5s ease-out, right 0.3s ease-out;
+    }
+    
+    .fancy .bottom-key-2 {
+        height: 2px;
+        width: 0.625rem;
+        right: 0.625rem;
+        bottom: -2px;
+        position: absolute;
+        background: white;
+        transition: width 0.5s ease-out, right 0.3s ease-out;
+    }
+    
+    .fancy:hover {
+        color: white;
     background: #cacaca;
-  }
-  
-  .fancy:hover::before {
-    width: 1.5rem;
-    background: white;
-  }
-  
-  .fancy:hover .text {
-    color: white;
-    padding-left: 1.5em;
-  }
-  
-  .fancy:hover .top-key {
-    left: -2px;
-    width: 0px;
-  }
-  
-  .fancy:hover .bottom-key-1,
-   .fancy:hover .bottom-key-2 {
-    right: 0;
-    width: 0;
-  }
+    }
+    
+    .fancy:hover::before {
+        width: 1.5rem;
+        background: white;
+    }
+    
+    .fancy:hover .text {
+        color: white;
+        padding-left: 1.5em;
+    }
+    
+    .fancy:hover .top-key {
+        left: -2px;
+        width: 0px;
+    }
+    
+    .fancy:hover .bottom-key-1,
+    .fancy:hover .bottom-key-2 {
+        right: 0;
+        width: 0;
+    }
   /* Centrar el formulario */
 .form {
     max-width: 500px; /* Ancho máximo del formulario */
